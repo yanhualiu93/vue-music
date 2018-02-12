@@ -1,0 +1,23 @@
+// 背景图片
+bg-image($url)
+  background-image: url($url + "@2x.png")
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    background-image: url($url + "@3x.png")
+
+// 不换行
+no-wrap()
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+box-shadow()
+  box-shadow 0px 2px 3px 0px #7e8c8d40
+// 扩展点击区域
+extend-click()
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: -0.1rem
+    left: -0.1rem
+    right: -0.1rem
+    bottom: -0.1rem
